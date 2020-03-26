@@ -1,0 +1,2087 @@
+/******************************************************************************
+ *
+ *  ASAP2 file:     SS_1115.a2l
+ *
+ * Code generation for model "SS_1115".
+ *
+ * Model version              : 1.236
+ * Simulink Coder version : 8.6 (R2014a) 27-Dec-2013
+ * C source code generated on : Fri Nov 15 21:55:21 2019
+ * 
+ * Target selection: ec55xx.tlc
+ * Embedded hardware selection: Freescale MPC5500
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ *
+ * (add additional file header information here)
+ *
+ ******************************************************************************/
+
+ASAP2_VERSION  1 31   /* Version 1.31 */
+
+/begin PROJECT ECUCoderProject "ECUCoder Project"
+  
+  /begin HEADER "Header Comments go here"
+    
+  /end HEADER
+  
+  
+  /begin MODULE ModuleName  "No Comment"
+    
+    /begin MOD_PAR "No Comment"
+      
+    /end MOD_PAR
+    
+    /begin MOD_COMMON  "No Comment" 
+      BYTE_ORDER     MSB_FIRST
+    /end MOD_COMMON
+    /begin RECORD_LAYOUT Scalar_BOOLEAN
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_SWORD
+      FNC_VALUES 1 SWORD COLUMN_DIR DIRECT
+    /end RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Scalar_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_SLONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT32_IEEE
+      AXIS_PTS_X  1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_FLOAT64_IEEE
+      FNC_VALUES  1 FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup1D_X_FLOAT64_IEEE
+      AXIS_PTS_X  1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_UBYTE
+      FNC_VALUES  1 UBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_UBYTE
+      AXIS_PTS_X  1 UBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_BYTE
+      FNC_VALUES  1 SBYTE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_BYTE
+      AXIS_PTS_X  1 SBYTE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_UWORD
+      FNC_VALUES  1 UWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_UWORD
+      AXIS_PTS_X  1 UWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_WORD
+      FNC_VALUES  1 SWORD COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_WORD
+      AXIS_PTS_X  1 SWORD INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_ULONG
+      FNC_VALUES  1 ULONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_ULONG
+      AXIS_PTS_X  1 ULONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_LONG
+      FNC_VALUES  1 SLONG COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_LONG
+      AXIS_PTS_X  1 SLONG INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_FLOAT32_IEEE
+      FNC_VALUES  1 FLOAT32_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT32_IEEE
+      AXIS_PTS_X 1 FLOAT32_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_FLOAT64_IEEE
+      FNC_VALUES  1  FLOAT64_IEEE COLUMN_DIR DIRECT
+    /end   RECORD_LAYOUT
+    /begin RECORD_LAYOUT Lookup2D_X_FLOAT64_IEEE
+      AXIS_PTS_X 1 FLOAT64_IEEE INDEX_INCR DIRECT
+    /end   RECORD_LAYOUT
+    /begin CHARACTERISTIC
+      /* Name                   */      APS_low_y
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* Memory Address         */      0x40001bf8
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SS_1115_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      APS_Low
+        /* Conversion Method    */      SS_1115_CM_single
+        /* Number of Axis Pts   */      4
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    APS_low_x
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    /begin AXIS_PTS
+      /* Name                   */      APS_low_x
+      /* Long Identifier        */      ""
+      /* Memory Adress          */      0x40001be8
+      /* Input Quantity         */      APS_Low
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_single
+      /* Number of Axis Pts     */      4
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    /begin CHARACTERISTIC
+      /* Name                   */      APS_High_y
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* Memory Address         */      0x40001bd8
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SS_1115_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      APS_High
+        /* Conversion Method    */      SS_1115_CM_single
+        /* Number of Axis Pts   */      4
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    APS_High_x
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    /begin AXIS_PTS
+      /* Name                   */      APS_High_x
+      /* Long Identifier        */      ""
+      /* Memory Adress          */      0x40001bc8
+      /* Input Quantity         */      APS_High
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_single
+      /* Number of Axis Pts     */      4
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    /begin CHARACTERISTIC
+      /* Name                   */      OilPressure_y
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* Memory Address         */      0x40001cf0
+      /* Record Layout          */      Lookup1D_WORD
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SS_1115_CM_int16
+      /* Lower Limit            */      -32768
+      /* Upper Limit            */      32767
+      /begin AXIS_DESCR
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      OilPressureIn
+        /* Conversion Method    */      SS_1115_CM_int16
+        /* Number of Axis Pts   */      4
+        /* Lower Limit          */      -32768
+        /* Upper Limit          */      32767
+        AXIS_PTS_REF                    OilPressure_x
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    /begin AXIS_PTS
+      /* Name                   */      OilPressure_x
+      /* Long Identifier        */      ""
+      /* Memory Adress          */      0x40001ce8
+      /* Input Quantity         */      OilPressureIn
+      /* Record Layout          */      Lookup1D_X_WORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_int16
+      /* Number of Axis Pts     */      4
+      /* Lower Limit            */      -32768
+      /* Upper Limit            */      32767
+    /end AXIS_PTS
+    /begin CHARACTERISTIC
+      /* Name                   */      SteerAngle_y
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* Memory Address         */      0x40001c44
+      /* Record Layout          */      Lookup1D_FLOAT32_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SS_1115_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+      /begin AXIS_DESCR
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      SteerAngleInput_mea
+        /* Conversion Method    */      SS_1115_CM_single
+        /* Number of Axis Pts   */      15
+        /* Lower Limit          */      -3.4E+38
+        /* Upper Limit          */      3.4E+38
+        AXIS_PTS_REF                    SteerAngle_x
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    /begin AXIS_PTS
+      /* Name                   */      SteerAngle_x
+      /* Long Identifier        */      ""
+      /* Memory Adress          */      0x40001c08
+      /* Input Quantity         */      SteerAngleInput_mea
+      /* Record Layout          */      Lookup1D_X_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_single
+      /* Number of Axis Pts     */      15
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end AXIS_PTS
+    /begin CHARACTERISTIC
+      /* Name                   */      SpeedLimitFactor_y
+      /* Long Identifier        */      ""
+      /* Characteristic Type    */      CURVE
+      /* Memory Address         */      0x40001b88
+      /* Record Layout          */      Lookup1D_FLOAT64_IEEE
+      /* Maxdiff                */      0
+      /* Conversion Method      */      SS_1115_CM_double
+      /* Lower Limit            */      -1.7E+308
+      /* Upper Limit            */      1.7E+308
+      /begin AXIS_DESCR
+        /* Description of X-Axis Points */
+        /* Axis Type            */      COM_AXIS
+        /* Reference to Input   */      NO_INPUT_QUANTITY
+        /* Conversion Method    */      SS_1115_CM_double
+        /* Number of Axis Pts   */      8
+        /* Lower Limit          */      -1.7E+308
+        /* Upper Limit          */      1.7E+308
+        AXIS_PTS_REF                    SpeedLimitFactor_x
+      /end AXIS_DESCR
+    /end CHARACTERISTIC
+    /begin AXIS_PTS
+      /* Name                   */      SpeedLimitFactor_x
+      /* Long Identifier        */      ""
+      /* Memory Adress          */      0x40001b48
+      /* Input Quantity         */      NO_INPUT_QUANTITY
+      /* Record Layout          */      Lookup1D_X_FLOAT64_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_double
+      /* Number of Axis Pts     */      8
+      /* Lower Limit            */      -1.7E+308
+      /* Upper Limit            */      1.7E+308
+    /end AXIS_PTS
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      Differential_cal
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001d40
+      /* Record Layout          */      Scalar_FLOAT64_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_double
+      /* Lower Limit            */      -1.7E+308
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      SteerThresholdHigh_cal
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001cd0
+      /* Record Layout          */      Scalar_FLOAT64_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_double
+      /* Lower Limit            */      -1.7E+308
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      SteerThresholdLow_cal
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001cd8
+      /* Record Layout          */      Scalar_FLOAT64_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_double
+      /* Lower Limit            */      -1.7E+308
+      /* Upper Limit            */      1.7E+308
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      CustomReduceFactor_cal
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001ce0
+      /* Record Layout          */      Scalar_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      PowerBias_cal
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001ce4
+      /* Record Layout          */      Scalar_FLOAT32_IEEE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_single
+      /* Lower Limit            */      -3.4E+38
+      /* Upper Limit            */      3.4E+38
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      TorqueLimitNegativ_cal
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001cf8
+      /* Record Layout          */      Scalar_SWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_int16
+      /* Lower Limit            */      -32768
+      /* Upper Limit            */      32767
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      TorqueLimitPositiv_cal
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001cfa
+      /* Record Layout          */      Scalar_SWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_int16
+      /* Lower Limit            */      -32768
+      /* Upper Limit            */      32767
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      APS_High_null
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001cfc
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      APS_Low_null
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001cfe
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      BrakeSignal_cal
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001d00
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      MotorTemperatureHigh_cal
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001d02
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      MotorTemperatureLow_cal
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001d04
+      /* Record Layout          */      Scalar_UWORD
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_uint16
+      /* Lower Limit            */      0
+      /* Upper Limit            */      65535
+    /end CHARACTERISTIC
+    
+    /begin CHARACTERISTIC
+      /* Name                   */      LowSOCWarning_cal
+      /* Long Identifier        */      ""
+      /* Type                   */      VALUE
+      /* Memory Address         */      0x40001d48
+      /* Record Layout          */      Scalar_UBYTE
+      /* Maximum Difference     */      0
+      /* Conversion Method      */      SS_1115_CM_uint8
+      /* Lower Limit            */      0
+      /* Upper Limit            */      255
+    /end CHARACTERISTIC
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Velocity_kph
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      SS_1115_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       0x40001d50
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      DifferentialLimit_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT64_IEEE
+      /* Conversion method      */      SS_1115_CM_double
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -1.7E+308
+      /* Upper limit            */      1.7E+308
+      ECU_ADDRESS                       0x40001da0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APSLow_pct
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001ddc
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APSHigh_pct
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001de4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APS_Torque
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001dd0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK4_TempMotor_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001df8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK4_TempInverter_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001dfc
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK3_TempMotor_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001e08
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK3_TempInverter_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001e0c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK2_TempMotor_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001e18
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK2_TempInverter_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001e1c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK1_TempMotor_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001e28
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK1_TempInverter_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001e2c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SOCReduceFactor_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001d7c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPSFaultCheck_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001df0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      CustomReduceFactor1_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001dbc
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      TqLimitFactor_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001d58
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Powersum_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001d88
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      FrontPowerBias_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001d94
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      RearPowerBias_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001d80
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      DiffFactorRT_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001da8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      PowerReduceFactor_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001d8c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SlipRatio_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001d78
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APPS_BrakeRuleCheck_mea
+      /* Long identifier        */      ""
+      /* Data type              */      FLOAT32_IEEE
+      /* Conversion method      */      SS_1115_CM_single
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -3.4E+38
+      /* Upper limit            */      3.4E+38
+      ECU_ADDRESS                       0x40001dec
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SteerAngleInDegree_mea
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      SS_1115_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x40001d72
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Tq1_mea
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      SS_1115_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x40001d62
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Tq2_mea
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      SS_1115_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x40001d60
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Tq3_mea
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      SS_1115_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x40001d5e
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Tq4_mea
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      SS_1115_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x40001d5c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AngleThresholdLow_mea
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      SS_1115_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x40001dcc
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AngleThresholdHigh_mea
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      SS_1115_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x40001dce
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      TorqueLimitPositiv_mea
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      SS_1115_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x40001d64
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      TorqueLimitNegativ_mea
+      /* Long identifier        */      ""
+      /* Data type              */      SWORD
+      /* Conversion method      */      SS_1115_CM_int16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      -32768
+      /* Upper limit            */      32767
+      ECU_ADDRESS                       0x40001d66
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APS_Low
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001dd4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APS_High
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001dd6
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      OilPressureIn
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001d90
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Suspension_FL_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001d6e
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Suspension_FR_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001d6c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Suspension_RL_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001d6a
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Suspension_RR_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001d68
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      SteerAngleInput_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001d70
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK4_ActualVelocity_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001e00
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK3_ActualVelocity_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001e10
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK2_ActualVelocity_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001e20
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK1_ActualVelocity_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UWORD
+      /* Conversion method      */      SS_1115_CM_uint16
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      65535
+      ECU_ADDRESS                       0x40001e30
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APSLOK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001de0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APSROK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001dd8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Pressure
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001d84
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK4_bSystemReady_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001df4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK4_bQuitDcOn_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001df6
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK4_bError_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001df7
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK4_bQuitInverterOn_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001df5
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK3_bSystemReady_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e02
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK3_bQuitDcOn_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e04
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK3_bError_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e05
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK3_bQuitInverterOn_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e03
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK2_bSystemReady_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e12
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK2_bQuitDcOn_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e14
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK2_bError_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e15
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK2_bQuitInverterOn_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e13
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK1_bSystemReady_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e22
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK1_bQuitDcOn_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e24
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK1_bError_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e25
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      AMK1_bQuitInverterOn_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001e23
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      DRSCANOK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001db8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      DRSCAN_MEA
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      /* Array Size             */
+      ARRAY_SIZE                        8
+      ECU_ADDRESS                       0x40001db0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BMSCANOK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001dca
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      CAN0512OK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001dc6
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      CAN0518OK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001dc5
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      CAN1OK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001dc3
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      CAN2OK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001dc2
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      CAN3OK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001dc1
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      CAN4OK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001dc0
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      CAN0334OK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001dc7
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      DRSState_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001dac
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      ECU_InverterOn
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001d99
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      ECU_DcOn
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001d9c
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      ECU_Enable
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001d9b
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      ECU_ErrorReset
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001d9a
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      CAN0522OK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_uint8
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      255
+      ECU_ADDRESS                       0x40001dc4
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      StartSignal
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001d74
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      APSBothOK_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001de8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      BrakeSignal_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001dc9
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      FanOpenSignal_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001d98
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      Buzzing_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001dc8
+    /end MEASUREMENT
+    
+    
+    /begin MEASUREMENT
+      /* Name                   */      LowSOCWarning_mea
+      /* Long identifier        */      ""
+      /* Data type              */      UBYTE
+      /* Conversion method      */      SS_1115_CM_boolean
+      /* Resolution (Not used)  */      0
+      /* Accuracy (Not used)    */      0
+      /* Lower limit            */      0
+      /* Upper limit            */      1
+      ECU_ADDRESS                       0x40001d92
+    /end MEASUREMENT
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SS_1115_CM_single
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%8.6"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SS_1115_CM_int16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SS_1115_CM_double
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%15.10"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SS_1115_CM_uint16
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%5.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SS_1115_CM_uint8
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%3.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin COMPU_METHOD
+      /* Name of CompuMethod    */      SS_1115_CM_boolean
+      /* Long identifier        */      "Q = V"
+      /* Conversion Type        */      RAT_FUNC
+      /* Format                 */      "%1.0"
+      /* Units                  */      ""
+      /* Coefficients           */      COEFFS 0 1 0 0 0 1
+    /end COMPU_METHOD
+    
+    /begin GROUP 
+      /* Name                   */       SS_1115
+      /* Long identifier        */       "SS_1115"
+      /* Root                    */       ROOT
+      /begin SUB_GROUP
+        Root_Function_Call_Subsystem
+        Root_HardWare_Input
+        Root_VCU_MCU
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_Function_Call_Subsystem
+      /* Long identifier        */       "SS_1115/Function-Call Subsystem"
+      /begin REF_MEASUREMENT
+        CAN0512OK_mea
+        Velocity_kph
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_HardWare_Input
+      /* Long identifier        */       "SS_1115/HardWare_Input"
+      /begin SUB_GROUP
+        S2_APSProcess
+        S2_BMS_Info
+        S2_DRS_CMDInput
+        S2_In1_Message
+        S2_In2_Message
+        S2_In3_Message
+        S2_In4_Message
+        S2_OilPressrue_Mpa
+        S2_Steer_Angle
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        OilPressureIn
+        StartSignal
+        Suspension_FL_mea
+        Suspension_FR_mea
+        Suspension_RL_mea
+        Suspension_RR_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       Root_VCU_MCU
+      /* Long identifier        */       "SS_1115/VCU_MCU"
+      /begin SUB_GROUP
+        S4_Atomic_Subsystem
+        S4_Enabled_Subsystem
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        FanOpenSignal_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_APSProcess
+      /* Long identifier        */       "SS_1115/HardWare_Input/APSProcess"
+      /begin REF_MEASUREMENT
+        APSBothOK_mea
+        APSHigh_pct
+        APSLOK_mea
+        APSLow_pct
+        APSROK_mea
+        APS_High
+        APS_Low
+        APS_Torque
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_BMS_Info
+      /* Long identifier        */       "SS_1115/HardWare_Input/BMS Info"
+      /begin REF_MEASUREMENT
+        BMSCANOK_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_DRS_CMDInput
+      /* Long identifier        */       "SS_1115/HardWare_Input/DRS CMDInput"
+      /begin REF_MEASUREMENT
+        DRSCANOK_mea
+        DRSCAN_MEA
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_In1_Message
+      /* Long identifier        */       "SS_1115/HardWare_Input/In1_Message"
+      /begin SUB_GROUP
+        S8_Function_Call_Subsystem
+        S8_Function_Call_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_In2_Message
+      /* Long identifier        */       "SS_1115/HardWare_Input/In2_Message"
+      /begin SUB_GROUP
+        S9_Function_Call_Subsystem
+        S9_Function_Call_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_In3_Message
+      /* Long identifier        */       "SS_1115/HardWare_Input/In3_Message"
+      /begin SUB_GROUP
+        S10_Function_Call_Subsystem
+        S10_Function_Call_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_In4_Message
+      /* Long identifier        */       "SS_1115/HardWare_Input/In4_Message"
+      /begin SUB_GROUP
+        S11_Function_Call_Subsystem
+        S11_Function_Call_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_OilPressrue_Mpa
+      /* Long identifier        */       "SS_1115/HardWare_Input/OilPressrue_Mpa"
+      /begin REF_MEASUREMENT
+        BrakeSignal_mea
+        Pressure
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S2_Steer_Angle
+      /* Long identifier        */       "SS_1115/HardWare_Input/Steer Angle"
+      /begin REF_MEASUREMENT
+        SteerAngleInDegree_mea
+        SteerAngleInput_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_Atomic_Subsystem
+      /* Long identifier        */       "SS_1115/VCU_MCU/Atomic Subsystem"
+      /begin REF_MEASUREMENT
+        CAN0522OK_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S4_Enabled_Subsystem
+      /* Long identifier        */       "SS_1115/VCU_MCU/Enabled Subsystem"
+      /begin SUB_GROUP
+        S63_SlipRatio_Cal
+        S63_Torquearrengement
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        APPSFaultCheck_mea
+        APPS_BrakeRuleCheck_mea
+        Buzzing_mea
+        CAN0334OK_mea
+        CAN0518OK_mea
+        CAN1OK_mea
+        CAN2OK_mea
+        CAN3OK_mea
+        CAN4OK_mea
+        CustomReduceFactor1_mea
+        DRSState_mea
+        ECU_DcOn
+        ECU_Enable
+        ECU_ErrorReset
+        ECU_InverterOn
+        LowSOCWarning_mea
+        SOCReduceFactor_mea
+        TorqueLimitNegativ_mea
+        TorqueLimitPositiv_mea
+        Tq1_mea
+        Tq2_mea
+        Tq3_mea
+        Tq4_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_Function_Call_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In1_Message/Function-Call Subsystem"
+      /begin SUB_GROUP
+        S19_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S8_Function_Call_Subsystem1
+      /* Long identifier        */       "SS_1115/HardWare_Input/In1_Message/Function-Call Subsystem1"
+      /begin SUB_GROUP
+        S20_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_Function_Call_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In2_Message/Function-Call Subsystem"
+      /begin SUB_GROUP
+        S24_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S9_Function_Call_Subsystem1
+      /* Long identifier        */       "SS_1115/HardWare_Input/In2_Message/Function-Call Subsystem1"
+      /begin SUB_GROUP
+        S25_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_Function_Call_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In3_Message/Function-Call Subsystem"
+      /begin SUB_GROUP
+        S29_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S10_Function_Call_Subsystem1
+      /* Long identifier        */       "SS_1115/HardWare_Input/In3_Message/Function-Call Subsystem1"
+      /begin SUB_GROUP
+        S30_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_Function_Call_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In4_Message/Function-Call Subsystem"
+      /begin SUB_GROUP
+        S34_Subsystem1
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S11_Function_Call_Subsystem1
+      /* Long identifier        */       "SS_1115/HardWare_Input/In4_Message/Function-Call Subsystem1"
+      /begin SUB_GROUP
+        S35_Subsystem
+      /end SUB_GROUP
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S63_SlipRatio_Cal
+      /* Long identifier        */       "SS_1115/VCU_MCU/Enabled Subsystem/SlipRatio_Cal"
+      /begin REF_MEASUREMENT
+        SlipRatio_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S63_Torquearrengement
+      /* Long identifier        */       "SS_1115/VCU_MCU/Enabled Subsystem/Torquearrengement"
+      /begin SUB_GROUP
+        S75_Differential_
+        S75_PowerBias_
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        PowerReduceFactor_mea
+        Powersum_mea
+        TqLimitFactor_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S19_Subsystem1
+      /* Long identifier        */       "SS_1115/HardWare_Input/In1_Message/Function-Call Subsystem/Subsystem1"
+      /begin SUB_GROUP
+        S21_Subsystem
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        AMK1_ActualVelocity_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S20_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In1_Message/Function-Call Subsystem1/Subsystem"
+      /begin REF_MEASUREMENT
+        AMK1_TempInverter_mea
+        AMK1_TempMotor_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S24_Subsystem1
+      /* Long identifier        */       "SS_1115/HardWare_Input/In2_Message/Function-Call Subsystem/Subsystem1"
+      /begin SUB_GROUP
+        S26_Subsystem
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        AMK2_ActualVelocity_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S25_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In2_Message/Function-Call Subsystem1/Subsystem"
+      /begin REF_MEASUREMENT
+        AMK2_TempInverter_mea
+        AMK2_TempMotor_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S29_Subsystem1
+      /* Long identifier        */       "SS_1115/HardWare_Input/In3_Message/Function-Call Subsystem/Subsystem1"
+      /begin SUB_GROUP
+        S31_Subsystem
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        AMK3_ActualVelocity_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S30_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In3_Message/Function-Call Subsystem1/Subsystem"
+      /begin REF_MEASUREMENT
+        AMK3_TempInverter_mea
+        AMK3_TempMotor_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S34_Subsystem1
+      /* Long identifier        */       "SS_1115/HardWare_Input/In4_Message/Function-Call Subsystem/Subsystem1"
+      /begin SUB_GROUP
+        S36_Subsystem
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        AMK4_ActualVelocity_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S35_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In4_Message/Function-Call Subsystem1/Subsystem"
+      /begin REF_MEASUREMENT
+        AMK4_TempInverter_mea
+        AMK4_TempMotor_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S75_Differential_
+      /* Long identifier        */       "SS_1115/VCU_MCU/Enabled Subsystem/Torquearrengement/Differential_"
+      /begin SUB_GROUP
+        S86_Watchup_Table
+      /end SUB_GROUP
+      /begin REF_MEASUREMENT
+        AngleThresholdHigh_mea
+        AngleThresholdLow_mea
+        DifferentialLimit_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S75_PowerBias_
+      /* Long identifier        */       "SS_1115/VCU_MCU/Enabled Subsystem/Torquearrengement/PowerBias_"
+      /begin REF_MEASUREMENT
+        FrontPowerBias_mea
+        RearPowerBias_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S21_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In1_Message/Function-Call Subsystem/Subsystem1/Subsystem"
+      /begin REF_MEASUREMENT
+        AMK1_bError_mea
+        AMK1_bQuitDcOn_mea
+        AMK1_bQuitInverterOn_mea
+        AMK1_bSystemReady_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S26_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In2_Message/Function-Call Subsystem/Subsystem1/Subsystem"
+      /begin REF_MEASUREMENT
+        AMK2_bError_mea
+        AMK2_bQuitDcOn_mea
+        AMK2_bQuitInverterOn_mea
+        AMK2_bSystemReady_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S31_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In3_Message/Function-Call Subsystem/Subsystem1/Subsystem"
+      /begin REF_MEASUREMENT
+        AMK3_bError_mea
+        AMK3_bQuitDcOn_mea
+        AMK3_bQuitInverterOn_mea
+        AMK3_bSystemReady_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S36_Subsystem
+      /* Long identifier        */       "SS_1115/HardWare_Input/In4_Message/Function-Call Subsystem/Subsystem1/Subsystem"
+      /begin REF_MEASUREMENT
+        AMK4_bError_mea
+        AMK4_bQuitDcOn_mea
+        AMK4_bQuitInverterOn_mea
+        AMK4_bSystemReady_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    /begin GROUP 
+      /* Name                   */       S86_Watchup_Table
+      /* Long identifier        */       "SS_1115/VCU_MCU/Enabled Subsystem/Torquearrengement/Differential_/Watchup-Table"
+      /begin REF_MEASUREMENT
+        DiffFactorRT_mea
+      /end REF_MEASUREMENT
+    /end GROUP
+    
+    
+  /end MODULE
+  
+  
+/end PROJECT
+/* (add any file trailer comments here) */
+/* EOF SS_1115.a2l */
